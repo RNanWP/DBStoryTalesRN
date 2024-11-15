@@ -38,6 +38,8 @@
             btnConsultarUsuario = new Button();
             label1 = new Label();
             label2 = new Label();
+            lblIdUsuario = new Label();
+            txtIdUsuario = new TextBox();
             SuspendLayout();
             // 
             // lblNomeUsuario
@@ -132,11 +134,29 @@
             label2.TabIndex = 9;
             label2.Text = "StoryTales RN";
             // 
+            // lblIdUsuario
+            // 
+            lblIdUsuario.AutoSize = true;
+            lblIdUsuario.Location = new Point(108, 143);
+            lblIdUsuario.Name = "lblIdUsuario";
+            lblIdUsuario.Size = new Size(27, 20);
+            lblIdUsuario.TabIndex = 10;
+            lblIdUsuario.Text = "ID:";
+            // 
+            // txtIdUsuario
+            // 
+            txtIdUsuario.Location = new Point(147, 140);
+            txtIdUsuario.Name = "txtIdUsuario";
+            txtIdUsuario.Size = new Size(132, 27);
+            txtIdUsuario.TabIndex = 11;
+            // 
             // FormUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(658, 307);
+            Controls.Add(txtIdUsuario);
+            Controls.Add(lblIdUsuario);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnConsultarUsuario);
@@ -165,5 +185,7 @@
         private Button btnConsultarUsuario;
         private Label label1;
         private Label label2;
+        private Label lblIdUsuario;
+        private TextBox txtIdUsuario;
     }
 }
