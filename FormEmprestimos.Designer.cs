@@ -33,15 +33,14 @@
             lblDataEmprestimo = new Label();
             cmbUsuarioEmprestimo = new ComboBox();
             cmbLivroEmprestimo = new ComboBox();
-            dtpDataDevolucao = new DateTimePicker();
+            dtpDataEmprestimo = new DateTimePicker();
             btnRegistrarEmprestimo = new Button();
             StoryTales = new Label();
             Matricula = new Label();
             btnRegistrarDevolucao = new Button();
+            dtpDataDevolucao = new DateTimePicker();
+            lblDataDevolucao = new Label();
             txtIdEmprestimo = new TextBox();
-            label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label2 = new Label();
             SuspendLayout();
             // 
             // lblUsuarioEmprestimo
@@ -65,11 +64,11 @@
             // lblDataEmprestimo
             // 
             lblDataEmprestimo.AutoSize = true;
-            lblDataEmprestimo.Location = new Point(31, 311);
+            lblDataEmprestimo.Location = new Point(31, 218);
             lblDataEmprestimo.Name = "lblDataEmprestimo";
-            lblDataEmprestimo.Size = new Size(135, 20);
+            lblDataEmprestimo.Size = new Size(149, 20);
             lblDataEmprestimo.TabIndex = 2;
-            lblDataEmprestimo.Text = "Data de devolução";
+            lblDataEmprestimo.Text = "Data de Empréstimo:";
             // 
             // cmbUsuarioEmprestimo
             // 
@@ -87,16 +86,16 @@
             cmbLivroEmprestimo.Size = new Size(234, 28);
             cmbLivroEmprestimo.TabIndex = 4;
             // 
-            // dtpDataDevolucao
+            // dtpDataEmprestimo
             // 
-            dtpDataDevolucao.Location = new Point(186, 306);
-            dtpDataDevolucao.Name = "dtpDataDevolucao";
-            dtpDataDevolucao.Size = new Size(333, 27);
-            dtpDataDevolucao.TabIndex = 5;
+            dtpDataEmprestimo.Location = new Point(186, 213);
+            dtpDataEmprestimo.Name = "dtpDataEmprestimo";
+            dtpDataEmprestimo.Size = new Size(333, 27);
+            dtpDataEmprestimo.TabIndex = 5;
             // 
             // btnRegistrarEmprestimo
             // 
-            btnRegistrarEmprestimo.Location = new Point(59, 356);
+            btnRegistrarEmprestimo.Location = new Point(60, 337);
             btnRegistrarEmprestimo.Name = "btnRegistrarEmprestimo";
             btnRegistrarEmprestimo.Size = new Size(176, 52);
             btnRegistrarEmprestimo.TabIndex = 6;
@@ -118,7 +117,7 @@
             // 
             Matricula.AutoSize = true;
             Matricula.Font = new Font("Segoe UI", 9F);
-            Matricula.Location = new Point(175, 451);
+            Matricula.Location = new Point(176, 432);
             Matricula.Name = "Matricula";
             Matricula.Size = new Size(192, 20);
             Matricula.TabIndex = 14;
@@ -126,7 +125,7 @@
             // 
             // btnRegistrarDevolucao
             // 
-            btnRegistrarDevolucao.Location = new Point(304, 356);
+            btnRegistrarDevolucao.Location = new Point(305, 337);
             btnRegistrarDevolucao.Name = "btnRegistrarDevolucao";
             btnRegistrarDevolucao.Size = new Size(176, 52);
             btnRegistrarDevolucao.TabIndex = 16;
@@ -134,52 +133,42 @@
             btnRegistrarDevolucao.UseVisualStyleBackColor = true;
             btnRegistrarDevolucao.Click += btnRegistrarDevolucao_Click;
             // 
+            // dtpDataDevolucao
+            // 
+            dtpDataDevolucao.Location = new Point(186, 262);
+            dtpDataDevolucao.Name = "dtpDataDevolucao";
+            dtpDataDevolucao.Size = new Size(333, 27);
+            dtpDataDevolucao.TabIndex = 23;
+            // 
+            // lblDataDevolucao
+            // 
+            lblDataDevolucao.AutoSize = true;
+            lblDataDevolucao.Location = new Point(42, 267);
+            lblDataDevolucao.Name = "lblDataDevolucao";
+            lblDataDevolucao.Size = new Size(138, 20);
+            lblDataDevolucao.TabIndex = 22;
+            lblDataDevolucao.Text = "Data de devolução:";
+            // 
             // txtIdEmprestimo
             // 
-            txtIdEmprestimo.Location = new Point(134, 186);
+            txtIdEmprestimo.Location = new Point(373, 68);
             txtIdEmprestimo.Name = "txtIdEmprestimo";
-            txtIdEmprestimo.Size = new Size(199, 27);
+            txtIdEmprestimo.Size = new Size(125, 27);
             txtIdEmprestimo.TabIndex = 24;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(31, 189);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 20);
-            label1.TabIndex = 25;
-            label1.Text = "ID devolução:";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(186, 253);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(333, 27);
-            dateTimePicker1.TabIndex = 27;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(31, 258);
-            label2.Name = "label2";
-            label2.Size = new Size(149, 20);
-            label2.TabIndex = 26;
-            label2.Text = "Data de Empréstimo:";
             // 
             // FormEmprestimos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(542, 488);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            ClientSize = new Size(542, 469);
             Controls.Add(txtIdEmprestimo);
+            Controls.Add(dtpDataDevolucao);
+            Controls.Add(lblDataDevolucao);
             Controls.Add(btnRegistrarDevolucao);
             Controls.Add(StoryTales);
             Controls.Add(Matricula);
             Controls.Add(btnRegistrarEmprestimo);
-            Controls.Add(dtpDataDevolucao);
+            Controls.Add(dtpDataEmprestimo);
             Controls.Add(cmbLivroEmprestimo);
             Controls.Add(cmbUsuarioEmprestimo);
             Controls.Add(lblDataEmprestimo);
@@ -198,14 +187,13 @@
         private Label lblDataEmprestimo;
         private ComboBox cmbUsuarioEmprestimo;
         private ComboBox cmbLivroEmprestimo;
-        private DateTimePicker dtpDataDevolucao;
+        private DateTimePicker dtpDataEmprestimo;
         private Button btnRegistrarEmprestimo;
         private Label StoryTales;
         private Label Matricula;
         private Button btnRegistrarDevolucao;
+        private DateTimePicker dtpDataDevolucao;
+        private Label lblDataDevolucao;
         private TextBox txtIdEmprestimo;
-        private Label label1;
-        private DateTimePicker dateTimePicker1;
-        private Label label2;
     }
 }

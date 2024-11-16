@@ -30,5 +30,11 @@ namespace StoryTales_RN___Trabalho_Final
             FormEmprestimos formEmprestimos = new FormEmprestimos();
             formEmprestimos.ShowDialog();
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            FormConsulta formConsulta = new FormConsulta();
+            formConsulta.ShowDialog();
+        }
     }
 }

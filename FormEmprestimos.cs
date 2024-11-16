@@ -74,7 +74,7 @@ namespace StoryTales_RN___Trabalho_Final
 
             int usuarioID = (int)cmbUsuarioEmprestimo.SelectedValue;
             int livroID = (int)cmbLivroEmprestimo.SelectedValue;
-            DateTime dataEmprestimo = dtpDataDevolucao.Value;
+            DateTime dataEmprestimo = dtpDataEmprestimo.Value;
 
             string connectionString = @"Server=localhost; Database=storytalesrn; Uid=root; Pwd=root;";
             string query = "INSERT INTO Emprestimo (UsuarioId, LivroId, DataEmprestimo) VALUES (@UsuarioID, @LivroID, @DataEmprestimo)";

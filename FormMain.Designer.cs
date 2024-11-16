@@ -34,6 +34,7 @@
             btnEmprestimos = new Button();
             label2 = new Label();
             label1 = new Label();
+            btnConsulta = new Button();
             SuspendLayout();
             // 
             // btnUsuarios
@@ -100,11 +101,23 @@
             label1.TabIndex = 11;
             label1.Text = "Renan Santos - 2222200490";
             // 
+            // btnConsulta
+            // 
+            btnConsulta.Font = new Font("Segoe UI", 15F);
+            btnConsulta.Location = new Point(274, 422);
+            btnConsulta.Name = "btnConsulta";
+            btnConsulta.Size = new Size(198, 64);
+            btnConsulta.TabIndex = 12;
+            btnConsulta.Text = "Consultas";
+            btnConsulta.UseVisualStyleBackColor = true;
+            btnConsulta.Click += btnConsulta_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(737, 405);
+            ClientSize = new Size(733, 498);
+            Controls.Add(btnConsulta);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(btnEmprestimos);
@@ -125,5 +138,6 @@
         private Button btnEmprestimos;
         private Label label2;
         private Label label1;
+        private Button btnConsulta;
     }
 }

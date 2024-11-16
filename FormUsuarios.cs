@@ -126,8 +126,14 @@ namespace StoryTales_RN___Trabalho_Final
 
         private void btnConsultarUsuario_Click(object sender, EventArgs e)
         {
-            string nome = txtNomeUsuario.Text;
-            string email = txtEmailUsuario.Text;
+            string nome = txtNomeUsuario.Text.Trim();
+            string email = txtEmailUsuario.Text.Trim();
+
+            if (string.IsNullOrEmpty(nome) && string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Digite um nome ou email para consultar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             try
             {
@@ -135,20 +141,39 @@ namespace StoryTales_RN___Trabalho_Final
                 {
                     if (db.OpenConnection())
                     {
-                        string query = "INSERT INTO Usuario (Nome, Email) VALUES (@nome, @email)";
+                        string query = "SELECT * FROM Usuario WHERE Nome = @nome OR Email = @email";
                         MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
                         cmd.Parameters.AddWithValue("@nome", nome);
                         cmd.Parameters.AddWithValue("@email", email);
-                        cmd.ExecuteNonQuery();
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                txtIdUsuario.Text = reader["Id"].ToString();
+                                txtNomeUsuario.Text = reader["Nome"].ToString();
+                                txtEmailUsuario.Text = reader["Email"].ToString();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário não encontrado.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        reader.Close();
                         db.CloseConnection();
-                        MessageBox.Show("Usuário consultado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+            }
+            catch (MySqlException sqlEx)
+            {
+                MessageBox.Show("Erro ao consultar usuário (SQL): " + sqlEx.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao consultar usuário: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
