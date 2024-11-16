@@ -31,13 +31,15 @@
             lblTituloLivro = new Label();
             lblAutorLivro = new Label();
             txtTituloLivro = new TextBox();
-            comboBox1 = new ComboBox();
+            txtAutorLivro = new ComboBox();
             btnConsultarLivro = new Button();
             btnExcluirLivro = new Button();
             btnAtualizarLivro = new Button();
             btnSalvarLivro = new Button();
             label1 = new Label();
             label2 = new Label();
+            txtIdLivro = new TextBox();
+            lblIdLivro = new Label();
             SuspendLayout();
             // 
             // lblTituloLivro
@@ -65,55 +67,59 @@
             txtTituloLivro.Size = new Size(230, 27);
             txtTituloLivro.TabIndex = 2;
             // 
-            // comboBox1
+            // txtAutorLivro
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(125, 134);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(230, 28);
-            comboBox1.TabIndex = 3;
+            txtAutorLivro.FormattingEnabled = true;
+            txtAutorLivro.Location = new Point(125, 134);
+            txtAutorLivro.Name = "txtAutorLivro";
+            txtAutorLivro.Size = new Size(230, 28);
+            txtAutorLivro.TabIndex = 3;
             // 
             // btnConsultarLivro
             // 
-            btnConsultarLivro.Location = new Point(230, 267);
+            btnConsultarLivro.Location = new Point(227, 332);
             btnConsultarLivro.Name = "btnConsultarLivro";
             btnConsultarLivro.Size = new Size(125, 46);
             btnConsultarLivro.TabIndex = 11;
             btnConsultarLivro.Text = "Consultar";
             btnConsultarLivro.UseVisualStyleBackColor = true;
+            btnConsultarLivro.Click += btnConsultarLivro_Click;
             // 
             // btnExcluirLivro
             // 
-            btnExcluirLivro.Location = new Point(62, 267);
+            btnExcluirLivro.Location = new Point(59, 332);
             btnExcluirLivro.Name = "btnExcluirLivro";
             btnExcluirLivro.Size = new Size(125, 46);
             btnExcluirLivro.TabIndex = 10;
             btnExcluirLivro.Text = "Excluir";
             btnExcluirLivro.UseVisualStyleBackColor = true;
+            btnExcluirLivro.Click += btnExcluirLivro_Click_1;
             // 
             // btnAtualizarLivro
             // 
-            btnAtualizarLivro.Location = new Point(231, 198);
+            btnAtualizarLivro.Location = new Point(228, 263);
             btnAtualizarLivro.Name = "btnAtualizarLivro";
             btnAtualizarLivro.Size = new Size(125, 46);
             btnAtualizarLivro.TabIndex = 9;
             btnAtualizarLivro.Text = "Atualizar";
             btnAtualizarLivro.UseVisualStyleBackColor = true;
+            btnAtualizarLivro.Click += btnAtualizarLivro_Click;
             // 
             // btnSalvarLivro
             // 
-            btnSalvarLivro.Location = new Point(62, 198);
+            btnSalvarLivro.Location = new Point(59, 263);
             btnSalvarLivro.Name = "btnSalvarLivro";
             btnSalvarLivro.Size = new Size(125, 46);
             btnSalvarLivro.TabIndex = 8;
             btnSalvarLivro.Text = "Salvar";
             btnSalvarLivro.UseVisualStyleBackColor = true;
+            btnSalvarLivro.Click += btnSalvarLivro_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F);
-            label1.Location = new Point(103, 327);
+            label1.Location = new Point(100, 392);
             label1.Name = "label1";
             label1.Size = new Size(192, 20);
             label1.TabIndex = 12;
@@ -129,18 +135,36 @@
             label2.TabIndex = 13;
             label2.Text = "StoryTales RN";
             // 
+            // txtIdLivro
+            // 
+            txtIdLivro.Location = new Point(125, 188);
+            txtIdLivro.Name = "txtIdLivro";
+            txtIdLivro.Size = new Size(132, 27);
+            txtIdLivro.TabIndex = 15;
+            // 
+            // lblIdLivro
+            // 
+            lblIdLivro.AutoSize = true;
+            lblIdLivro.Location = new Point(86, 191);
+            lblIdLivro.Name = "lblIdLivro";
+            lblIdLivro.Size = new Size(27, 20);
+            lblIdLivro.TabIndex = 14;
+            lblIdLivro.Text = "ID:";
+            // 
             // FormLivros
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(394, 356);
+            ClientSize = new Size(394, 431);
+            Controls.Add(txtIdLivro);
+            Controls.Add(lblIdLivro);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnConsultarLivro);
             Controls.Add(btnExcluirLivro);
             Controls.Add(btnAtualizarLivro);
             Controls.Add(btnSalvarLivro);
-            Controls.Add(comboBox1);
+            Controls.Add(txtAutorLivro);
             Controls.Add(txtTituloLivro);
             Controls.Add(lblAutorLivro);
             Controls.Add(lblTituloLivro);
@@ -155,12 +179,14 @@
         private Label lblTituloLivro;
         private Label lblAutorLivro;
         private TextBox txtTituloLivro;
-        private ComboBox comboBox1;
+        private ComboBox txtAutorLivro;
         private Button btnConsultarLivro;
         private Button btnExcluirLivro;
         private Button btnAtualizarLivro;
         private Button btnSalvarLivro;
         private Label label1;
         private Label label2;
+        private TextBox txtIdLivro;
+        private Label lblIdLivro;
     }
 }

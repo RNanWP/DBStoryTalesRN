@@ -36,6 +36,8 @@
             btnSalvarAutor = new Button();
             label2 = new Label();
             label1 = new Label();
+            txtIdAutor = new TextBox();
+            lblIdAutor = new Label();
             SuspendLayout();
             // 
             // lblNomeAutor
@@ -56,7 +58,7 @@
             // 
             // btnConsultarAutor
             // 
-            btnConsultarAutor.Location = new Point(203, 192);
+            btnConsultarAutor.Location = new Point(228, 281);
             btnConsultarAutor.Name = "btnConsultarAutor";
             btnConsultarAutor.Size = new Size(125, 46);
             btnConsultarAutor.TabIndex = 15;
@@ -65,7 +67,7 @@
             // 
             // btnExcluirAutor
             // 
-            btnExcluirAutor.Location = new Point(35, 192);
+            btnExcluirAutor.Location = new Point(60, 281);
             btnExcluirAutor.Name = "btnExcluirAutor";
             btnExcluirAutor.Size = new Size(125, 46);
             btnExcluirAutor.TabIndex = 14;
@@ -74,7 +76,7 @@
             // 
             // btnAtualizarAutor
             // 
-            btnAtualizarAutor.Location = new Point(203, 123);
+            btnAtualizarAutor.Location = new Point(228, 212);
             btnAtualizarAutor.Name = "btnAtualizarAutor";
             btnAtualizarAutor.Size = new Size(125, 46);
             btnAtualizarAutor.TabIndex = 13;
@@ -83,12 +85,13 @@
             // 
             // btnSalvarAutor
             // 
-            btnSalvarAutor.Location = new Point(35, 123);
+            btnSalvarAutor.Location = new Point(60, 212);
             btnSalvarAutor.Name = "btnSalvarAutor";
             btnSalvarAutor.Size = new Size(125, 46);
             btnSalvarAutor.TabIndex = 12;
             btnSalvarAutor.Text = "Salvar";
             btnSalvarAutor.UseVisualStyleBackColor = true;
+            btnSalvarAutor.Click += btnSalvarAutor_Click;
             // 
             // label2
             // 
@@ -104,17 +107,35 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F);
-            label1.Location = new Point(101, 261);
+            label1.Location = new Point(126, 350);
             label1.Name = "label1";
             label1.Size = new Size(192, 20);
             label1.TabIndex = 17;
             label1.Text = "Renan Santos - 2222200490";
             // 
+            // txtIdAutor
+            // 
+            txtIdAutor.Location = new Point(134, 127);
+            txtIdAutor.Name = "txtIdAutor";
+            txtIdAutor.Size = new Size(132, 27);
+            txtIdAutor.TabIndex = 19;
+            // 
+            // lblIdAutor
+            // 
+            lblIdAutor.AutoSize = true;
+            lblIdAutor.Location = new Point(95, 130);
+            lblIdAutor.Name = "lblIdAutor";
+            lblIdAutor.Size = new Size(27, 20);
+            lblIdAutor.TabIndex = 18;
+            lblIdAutor.Text = "ID:";
+            // 
             // FormAutores
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(413, 290);
+            ClientSize = new Size(413, 383);
+            Controls.Add(txtIdAutor);
+            Controls.Add(lblIdAutor);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(btnConsultarAutor);
@@ -139,5 +160,7 @@
         private Button btnSalvarAutor;
         private Label label2;
         private Label label1;
+        private TextBox txtIdAutor;
+        private Label lblIdAutor;
     }
 }

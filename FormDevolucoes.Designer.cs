@@ -78,9 +78,9 @@
             // cmbLivroDevolucao
             // 
             cmbLivroDevolucao.FormattingEnabled = true;
-            cmbLivroDevolucao.Location = new Point(65, 160);
+            cmbLivroDevolucao.Location = new Point(83, 160);
             cmbLivroDevolucao.Name = "cmbLivroDevolucao";
-            cmbLivroDevolucao.Size = new Size(252, 28);
+            cmbLivroDevolucao.Size = new Size(234, 28);
             cmbLivroDevolucao.TabIndex = 20;
             // 
             // cmbUsuarioDevolucao
